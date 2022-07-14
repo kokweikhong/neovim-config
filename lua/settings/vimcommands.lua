@@ -29,11 +29,12 @@ cmd [[
   autocmd TermOpen * startinsert
   autocmd BufLeave term://* stopinsert
 ]]
+    -- autocmd BufWinLeave * mkview
+    -- autocmd BufWinEnter * silent! loadview
 
 cmd [[
   augroup remember_folds
-    autocmd!
-    autocmd BufWinLeave * mkview
-    autocmd BufWinEnter * silent! loadview
+    autocmd BufWinLeave,BufLeave,BufWritePost,BufHidden,QuitPre ?* nested silent! mkview!
+    autocmd BufWinEnter ?* silent! loadviewutocmd!
   augroup END
 ]]
