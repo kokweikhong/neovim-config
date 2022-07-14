@@ -31,10 +31,12 @@ cmd [[
 ]]
     -- autocmd BufWinLeave * mkview
     -- autocmd BufWinEnter * silent! loadview
+    -- autocmd BufWinLeave,BufLeave,BufWritePost,BufHidden,QuitPre ?* nested silent! mkview!
+    -- autocmd BufWinEnter ?* silent! loadviewutocmd!
 
 cmd [[
-  augroup remember_folds
-    autocmd BufWinLeave,BufLeave,BufWritePost,BufHidden,QuitPre ?* nested silent! mkview!
-    autocmd BufWinEnter ?* silent! loadviewutocmd!
+  autocmd!
+  au BufWinLeave ?* mkview 1
+  au BufWinEnter ?* silent! loadview 1roup remember_folds
   augroup END
 ]]
