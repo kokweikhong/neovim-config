@@ -9,10 +9,10 @@ require'nvim-tree'.setup {
   open_on_tab         = false,
   hijack_cursor       = false,
   update_cwd          = false,
-  update_to_buf_dir   = {
-    enable = true,
-    auto_open = true,
-  },
+--   update_to_buf_dir   = {
+--     enable = true,
+--     auto_open = true,
+--   },
   diagnostics = {
     enable = false,
     icons = {
@@ -40,7 +40,7 @@ require'nvim-tree'.setup {
     height = 30,
     hide_root_folder = false,
     side = 'left',
-    auto_resize = false,
+--    auto_resize = false,
     mappings = {
       custom_only = false,
       list = {}

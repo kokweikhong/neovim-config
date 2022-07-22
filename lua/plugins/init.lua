@@ -11,7 +11,8 @@ return require('packer').startup(function(use)
         requires = 'kyazdani42/nvim-web-devicons',
     }
     -- Colorscheme
-    use 'marko-cerovac/material.nvim'
+    -- use 'marko-cerovac/material.nvim'
+    use 'folke/tokyonight.nvim'
     use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
     use {
       'nvim-lualine/lualine.nvim',
