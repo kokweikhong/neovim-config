@@ -42,3 +42,4 @@ vim.bo.expandtab = true
 vim.cmd [[
   tnoremap <silent> <ESC> <C-\><C-n>
 ]]
+

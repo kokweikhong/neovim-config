@@ -30,6 +30,15 @@ return require('packer').startup(function(use)
     -- Comment plugin
     use 'numToStr/Comment.nvim'
 
+    -- Fold plugin
+    use 'anuvyklack/pretty-fold.nvim'
+    use { 'anuvyklack/fold-preview.nvim',
+       requires = 'anuvyklack/keymap-amend.nvim',
+       config = function()
+          require('fold-preview').setup()
+       end
+    }
+    
 
     -- Auto completion
     -- nvim-cmp
