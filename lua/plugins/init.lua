@@ -38,7 +38,6 @@ return require('packer').startup(function(use)
           require('fold-preview').setup()
        end
     }
-    
 
     -- Auto completion
     -- nvim-cmp
