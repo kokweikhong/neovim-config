@@ -27,6 +27,11 @@ return require('packer').startup(function(use)
       requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    -- Terminal toggle plugin
+    use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+      require("toggleterm").setup()
+    end}
+
     -- Comment plugin
     use 'numToStr/Comment.nvim'
 
